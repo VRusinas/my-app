@@ -22,7 +22,22 @@ function Login() {
         email: email,
         password: password,
     }
-    console.log(login);
+
+    const requestOptions = {
+        method: 'POST',
+       // headers: { 'Content-Type': 'application/json' },
+        headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+           },
+        body: JSON.stringify({
+            email: email,
+            password: password,
+        })
+    };
+   const result = fetch('http://localhost:8080/users/login', requestOptions,)
+        .then((response) => response.json())
+        .then((data) => console.log(JSON.parse(data)));
 }
 
     return(

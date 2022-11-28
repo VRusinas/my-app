@@ -1,5 +1,7 @@
 import React, {useState,setState} from 'react';
 import './style.css'
+import axios from 'axios';
+
 function RegistrationForm() {
     
     const [firstName, setFirstName] = useState(null);
@@ -31,7 +33,7 @@ function RegistrationForm() {
         }
     }
 
-    const handleSubmit  = () => {
+    const handleSubmit = () => {
         const registration = {
             name: firstName,
             lastName: lastName,
@@ -41,6 +43,27 @@ function RegistrationForm() {
             confirmPassword: confirmPassword,
             userType: "CLIENT"
         }
+    //     axios.post(`http://localhost:8080/register`, { registration })
+    //   .then(res => {
+    //     console.log(res);
+    //     console.log(res.data);
+    //   })
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            name: firstName,
+            surname: lastName,
+            phoneNumber: phoneNumber,
+            email: email,
+            password: password,
+            confirmPassword: confirmPassword,
+            userType: "CLIENT"
+        })
+    };
+    fetch('http://localhost:8080/register', requestOptions)
+        .then(response => response.json())
+        //.then(data => this.setState({ postId: data.id }));
         console.log(registration);
     }
 
