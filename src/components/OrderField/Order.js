@@ -1,10 +1,9 @@
 import React, {useState,setState}  from 'react';
 import Header from '../header/header';
 import './style.css'
-window.id = 50;
 function Order() {
 
-
+    
     const [chosenTime, setChosenTime] = useState(null);
     const [requirements, setRequirements] = useState(null);
 
@@ -17,10 +16,24 @@ function Order() {
     }
 
     const handleSubmit = () => {
-       
+        console.log(window.id);
         const addOrder = {
             requirements: requirements
         }
+        const requestOptions = {
+            method: 'POST',
+           // headers: { 'Content-Type': 'application/json' },
+            headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+               },
+            body: JSON.stringify({
+                requirements: requirements,
+                userId: window.id
+            })
+        };
+        fetch('http://localhost:8080/orders', requestOptions,)
+            .then((response) => response.json())
         console.log(addOrder);
     }
 

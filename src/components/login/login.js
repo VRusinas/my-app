@@ -4,14 +4,45 @@ import './style.css'
 
 
 function Login() {
-
-
+    
     const [email, setEmail] = useState(null);
     const [password,setPassword] = useState(null);
     const [clickState, setClickState] = useState(null);
+    const [id, setId] = useState(null);
+   
+
     let count = 1;
 
+    function initLogin(){
+        const requestOptions = {
+            method: 'POST',
+           // headers: { 'Content-Type': 'application/json' },
+            headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+               },
+            body: JSON.stringify({
+                email: email,
+                password: password,
+            })
+        };
+        fetch('http://localhost:8080/users/login', requestOptions,)
+            .then((response) => response.json())
+            .then((response) => {setId(response.id) })
+            
+            //.then((data) => console.log(window.id))
+            window.id = id;
+    
+            console.log(window.id);
+            
+    }
+
+
+   
+   
+
     const handleInputChange = (e) => {
+
     const {id , value} = e.target;
     if(id === "email"){
         setEmail(value);
@@ -20,8 +51,13 @@ function Login() {
         setPassword(value);
     }
 }
-    const handleSubmit  = () => {
+    if(id == null)
+{
+    initLogin();
+}
     
+    const handleSubmit = () => {
+        initLogin();
      setClickState(count++);
      
     const login = {
@@ -29,21 +65,8 @@ function Login() {
         password: password,
     }
 
-    const requestOptions = {
-        method: 'POST',
-       // headers: { 'Content-Type': 'application/json' },
-        headers : { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-           },
-        body: JSON.stringify({
-            email: email,
-            password: password,
-        })
-    };
-   const result = fetch('http://localhost:8080/users/login', requestOptions,)
-        .then((response) => response.json())
-        .then((data) => console.log(JSON.parse(data)));
+    
+        
 }
 
     if(clickState < 1)

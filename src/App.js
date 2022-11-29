@@ -10,9 +10,10 @@ function App() {
     <div className="App">
        {/* <Header/>
        <RegistrationForm/> */}
-        {/* <Login/> */}
-        <Order/>
+        <Login/>
+        {/* <Order/> */}
         {/* <h1> {window.id}</h1> */}
+        <div>{window.id}</div>
     </div>
   );
 }
