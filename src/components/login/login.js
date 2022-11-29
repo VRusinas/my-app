@@ -1,12 +1,15 @@
 import React, {useState,setState} from 'react';
+import Order from '../OrderField/Order';
 import './style.css'
-
 
 
 function Login() {
 
+
     const [email, setEmail] = useState(null);
     const [password,setPassword] = useState(null);
+    const [clickState, setClickState] = useState(null);
+    let count = 1;
 
     const handleInputChange = (e) => {
     const {id , value} = e.target;
@@ -18,6 +21,9 @@ function Login() {
     }
 }
     const handleSubmit  = () => {
+    
+     setClickState(count++);
+     
     const login = {
         email: email,
         password: password,
@@ -40,6 +46,9 @@ function Login() {
         .then((data) => console.log(JSON.parse(data)));
 }
 
+    if(clickState < 1)
+    {
+        
     return(
         <div className="form">
         <div className="form-body">
@@ -59,5 +68,9 @@ function Login() {
     </div>
    
     )
+    }
+    else{
+        return(<Order/>)
+    }
 }
 export default Login;

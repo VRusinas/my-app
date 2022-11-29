@@ -1,0 +1,75 @@
+.orderContainer{
+    width: 100%;
+    height: 100vh;
+    background: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.orderBox{
+    width: 70%;
+    height: 80vh;
+    display: flex;
+   
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 4px solid whitesmoke;
+    /* border: 2px solid purple; */
+}
+.orderRequirements{
+    width: 90%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid purple; */
+   
+}
+.texBox{
+    width: 60%;
+    height: 50vh;
+    display: flex;
+    padding-right: 20px;
+    /* border: 2px solid purple; */
+}
+input{
+    width: 100%;
+    border: none;
+    border-radius: 10px 10px;
+}
+.date{
+    width: 40%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    
+   
+    /* border: 2px solid purple; */
+    border-radius: 10px 10px;
+}
+.dateName{
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+.datePicker{
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+
+
+
+
+.submitBtn{
+    padding: 25px;
+    border-radius: 10px 10px;
+    font-size: 16px;
+}
