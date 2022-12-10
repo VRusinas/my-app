@@ -1,6 +1,16 @@
-import React from 'react';
+import React, {useState,setState} from 'react';
 import './userTable.css'
 function UserTable() {
+
+
+    const [chosenTime, setChosenTime] = useState(null);
+    const [requirements, setRequirements] = useState(null);
+
+    fetch('http://localhost:8080/orders/' + new URLSearchParams({
+            id: window.id
+    }))
+    
+
     return(
 
         <div className='flex-conatainer'>
