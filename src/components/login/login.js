@@ -28,12 +28,15 @@ function Login() {
         };
         fetch('http://localhost:8080/users/login', requestOptions,)
             .then((response) => response.json())
-            .then((response) => {setId(response.id) })
+            .then((response) => {setId(response.id)
+                window.id = id;
+                console.log(window.id);
+            })
             
             //.then((data) => console.log(window.id))
             window.id = id;
     
-            console.log(window.id);
+           // console.log(window.id);
             
     }
 

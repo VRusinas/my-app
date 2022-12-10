@@ -13,6 +13,9 @@ function Order() {
         if(id === "requirements"){
             setRequirements(value);
         }
+        if(id === "chosenTime"){
+            setChosenTime(value);
+        }
     }
 
     const handleSubmit = () => {
@@ -29,12 +32,12 @@ function Order() {
                },
             body: JSON.stringify({
                 requirements: requirements,
-                userId: window.id
+                userId: window.id,
+                deliveryDate: chosenTime
             })
         };
         fetch('http://localhost:8080/orders', requestOptions,)
             .then((response) => response.json())
-        console.log(addOrder);
     }
 
     return(
@@ -55,10 +58,10 @@ function Order() {
                          for="party">Enter a date and time for your party booking:</label>
                         <input
                         className='datePicker'
-                        id="party"
+                        //id="party"
                         type="date"
                         name="partydate"
-                        value={chosenTime} />
+                        value={chosenTime} onChange = {(e) => handleInputChange(e)} id="chosenTime"/>
                         </div>
 
                     </div>

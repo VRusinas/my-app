@@ -4,7 +4,6 @@ import Login from './components/login/login';
 import RegistrationForm from './components/registration/registration';
 import Order from './components/OrderField/Order';
 
-
 function App() {
   return (
     <div className="App">
