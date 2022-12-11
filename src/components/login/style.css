@@ -1,9 +1,16 @@
+.flexForm{
+width: 100%;
+height: 25vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
 .form1{
     background-color: wheat;
     border-radius: 5px;
     width: 550px;
-    margin: 20px auto;
     padding: 20px;
+    height: 25vh;
     /* height: 600px; */
 }
 
@@ -12,9 +19,7 @@
     padding: 20px 10px;
 }
 
-.form-body1 > *{
-    padding: 5px;
-}
+
 
 .form__label1{
     width: 40%;
@@ -26,4 +31,11 @@
 
 .footer1{
     text-align: center;
+}
+.btn{
+      width: 6vw;
+    font-size: 14px;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgba(135, 135, 135, 0.197);
+    border-radius: 10px;
 }

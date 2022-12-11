@@ -6,6 +6,8 @@ import Order from './components/OrderField/Order';
 import UserTable from './components/userTable/userTable';
 import Preview from './components/preview/preview';
 import Edit from './components/edit/edit';
+import RegButton from './components/regButton/regButton';
+import SpecialistTable from './components/specialistTable/specialistTable';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         {/* <UserTable/> */}
         {/* <Preview/> */}
         {/* <Edit/> */}
+        {/* <RegButton/> */}
+        {/* <SpecialistTable/> */}
     </div>
   );
 }

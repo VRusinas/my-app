@@ -1,0 +1,22 @@
+.regBtn{
+    width: 6vw;
+    font-size: 14px;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgba(135, 135, 135, 0.197);
+    border-radius: 10px;
+}
+.btnConteiner{
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btncc{
+    background-color: wheat;
+    width: 590px;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

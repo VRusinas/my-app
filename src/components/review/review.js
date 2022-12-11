@@ -1,6 +1,6 @@
-import React,  {useState,setState, useEffect}  from 'react';
-import UserTable from '../userTable/userTable';
-function Edit() {
+import React, {useState,setState, useEffect} from 'react';
+import SpecialisTable from '../specialistTable/specialistTable';
+function Review() {
 
 
     const [editData, setEditData] = useState([]);
@@ -9,7 +9,7 @@ function Edit() {
 
 
 
-    function initEdit(){
+    function initReview(){
         const requestOptions = {
             method: 'GET',
             headers : { 
@@ -33,7 +33,7 @@ function Edit() {
     })       
     }
     
-    function initEditPost(){
+    function initReviewPost(){
         const requestOptions = {
             method: 'POST',
            // headers: { 'Content-Type': 'application/json' },
@@ -46,18 +46,18 @@ function Edit() {
                 requirements: editrequirements
             })
         };
-        fetch('http://localhost:8080/orders/id?', requestOptions)
+        fetch('http://localhost:8080/orders/css', requestOptions)
             
     }
 
 
 
     useEffect(()=>{
-        initEdit();
+        initReview();
         }, [])
 
         const handleClick = (event) =>{
-            initEditPost()
+            initReviewPost();
 
             
             let clk = 1;
@@ -85,13 +85,16 @@ function Edit() {
                 
                         <>
                         <div className='big-data'>
-                        <p>Order requirements</p>
+                        <p>Clients order requirements</p>
+                        <label className='lb-bg'> <input type="text" className='prw-impt-bg' readOnly={true} value={editData.requirements}  /></label>
+                        </div>
+                        <div className='big-data'>
                         <label className='lb-bg'> <input type="text" className='prw-impt-bg' defaultValue={editData.requirements} onChange = {(e) => handleInputChange(e)}   /></label>
                         </div></>
                     </form>
         </div>
         )
     }   
-    else return (<UserTable/>)
+    else return (<SpecialisTable/>)
 }
-export default Edit;
+export default Review;

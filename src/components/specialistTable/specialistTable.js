@@ -1,9 +1,7 @@
 import React, {useState,setState, useEffect} from 'react';
-import './userTable.css'
-import Preview from '../preview/preview';
-import Edit from '../edit/edit';
+import Review from '../review/review';
 
-function UserTable() {
+function SpecialistTable() {
    
 
     const [id,setId] = useState([]);
@@ -12,14 +10,11 @@ function UserTable() {
     const [orderState, setOrderState] = useState([]);
 
     const getData =()=>{
-        fetch('http://localhost:8080/orders?' + new URLSearchParams({id: window.id}))
+        fetch('http://localhost:8080/orders/css' )
             .then((response) => {return response.json();})
             .then((response) => {
                 
                 setData(response);
-                // for(let i; i < response.length; i++){
-
-                // }
        
     })
    console.log(data[0]);
@@ -46,14 +41,8 @@ const handleClickedit = (event, param) =>{
     setchoiceClickEdit(previewEdit++);
 }
 
-//console.log(id.get(0));
-//console.log(id[0].valueOf('userId'));
-
-if(choiceClick == 1){
-    return (<Preview/>)
-}
    if(choiceClickEdit == 1){
-    return (<Edit/>)
+    return (<Review/>)
 }
    
 if(choiceClick == null)
@@ -72,8 +61,8 @@ if(choiceClick == null)
                             <label className='labelT'>Order state  <input className='inputCl'  readOnly={true} value="In progress"  /></label>
                             <div className='button-container'>
 
-                                    <h1 onClick={event => handleClickedit(event, dat.id)} className='buttonT'>Edit</h1>
-                                    <h1 onClick={event => handleClick(event, dat.id)} className='buttonT'>Preview</h1>
+                                    <h1 onClick={event => handleClickedit(event, dat.id)} className='buttonT'>Review</h1>
+            
                                 </div></>              
                         </form>
                         ))}
@@ -81,22 +70,8 @@ if(choiceClick == null)
         )
    }  
 
-  
-    
-  
-   
    {console.log(choiceClickEdit)}
- 
-
-
-
-
-
-
-  
-
-
 
 
 }
-export default UserTable;
+export default SpecialistTable;

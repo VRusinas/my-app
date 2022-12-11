@@ -1,7 +1,10 @@
 import React, {useState,setState} from 'react';
+import Header from '../header/header';
+import RegButton from '../regButton/regButton';
 import Order from '../OrderField/Order';
 import UserTable from '../userTable/userTable';
 import './style.css'
+import SpecialistTable from '../specialistTable/specialistTable';
 
 
 function Login() {
@@ -11,6 +14,7 @@ function Login() {
     const [clickState, setClickState] = useState(null);
     const [id, setId] = useState(null);
     const [validator, setValidator] = useState(0);
+    const [userType, setuserType] = useState(null);
    
 
     let count = 1;
@@ -33,6 +37,7 @@ function Login() {
             .then((response) => {
                 if(response.id !== -1) {
                 setId(response.id)
+                setuserType(response.userType)
                 setValidator(1);
                 console.log(window.id);
                 }
@@ -74,31 +79,47 @@ function Login() {
         
 }
 
-if(clickState < 1 || validator === 0)
+
+
+    if(clickState < 1 || validator === 0)
     {
         
     return(
+        <>
+        <div className='flexForm'>
         <div className="form1">
-        <div className="form-body1">
+            <div className="form-body1">
 
-            <div className="email">
-                <label className="form__label1" for="email">Email </label>
-                <input  type="email" id="email" className="form__input" value={email} onChange = {(e) => handleInputChange(e)} placeholder="Email"/>
+                <div className="email">
+                    <label className="form__label1" for="email">Email </label>
+                    <input type="email" id="email" className="form__input" value={email} onChange={(e) => handleInputChange(e)} placeholder="Email" />
+                </div>
+                <div className="password">
+                    <label className="form__label1" for="password">Password </label>
+                    <input className="form__input1" type="password" id="password" value={password} onChange={(e) => handleInputChange(e)} placeholder="Password" />
+                </div>
             </div>
-            <div className="password">
-                <label className="form__label1" for="password">Password </label>
-                <input className="form__input1" type="password"  id="password" value={password} onChange = {(e) => handleInputChange(e)} placeholder="Password"/>
+            <div className="footer1">
+                <button onClick={() => handleSubmit()} type="submit" className="btn">Login</button>
+
             </div>
         </div>
-        <div className="footer1">
-            <button onClick={()=>handleSubmit()} type="submit" className="btn">Login</button>
         </div>
-    </div>
+        <RegButton /></>
    
     )
     }
     else{
-        return(<UserTable/>)
+        if(userType == "CLIENT"){
+            return (<UserTable/>)
+        }
+        if(userType == "CUSTOMER_SERVICE_SPECIALIST"){
+            return (<SpecialistTable/>)
+        }
     }
+
+
+
+
 }
 export default Login;
