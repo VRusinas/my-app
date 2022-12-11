@@ -40,18 +40,24 @@ let previewEdit = 1;
 
 
 const handleClick = (event, param) =>{
-window.orderId = param;
-setchoiceClick(previewClick++);
+    window.orderId = param;
+    setchoiceClick(previewClick++);
+}
+const handleClickedit = (event, param) =>{
+    window.orderId = param;
+    setchoiceClickEdit(previewEdit++);
 }
 
-const handleClick2 = (event, param) =>{
-window.orderId = param;
-setchoiceClickEdit(previewEdit++);
-}
 //console.log(id.get(0));
-
 //console.log(id[0].valueOf('userId'));
 
+if(choiceClick == 1){
+    return (<Preview/>)
+}
+   if(choiceClickEdit == 1){
+    return (<Edit/>)
+}
+   
 if(choiceClick == null)
 {
     return(           
@@ -68,7 +74,7 @@ if(choiceClick == null)
                             <label className='labelT'>Order state  <input className='inputCl'  readOnly={true} value="In progress"  /></label>
                             <div className='button-container'>
 
-                                    <h1 onClick={event => handleClick2(event, dat.id)} className='buttonT'>Edit</h1>
+                                    <h1 onClick={event => handleClickedit(event, dat.id)} className='buttonT'>Edit</h1>
                                     <h1 onClick={event => handleClick(event, dat.id)} className='buttonT'>Preview</h1>
                                 </div></>              
                         </form>
@@ -76,13 +82,12 @@ if(choiceClick == null)
             </div> 
         )
    }  
-   if(choiceClick == 1){
-    return (<Preview/>)
-   }
+
+  
+    
+  
    
-   if(choiceClickEdit == 1){
-    return (<Edit/>)
-   }
+   {console.log(choiceClickEdit)}
  
 
 
