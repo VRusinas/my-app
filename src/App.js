@@ -12,7 +12,7 @@ function App() {
        {/* <Header/> */}
        {/* <RegistrationForm/> */}
         <Login/>
-        {/* <Order/> */}
+        <Order/>
         {/* <h1> {window.id}</h1> */}
         {/* <div>{window.id}</div> */}
         {/* <UserTable/> */}
