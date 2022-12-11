@@ -1,10 +1,13 @@
 import React, {useState,setState, useEffect}  from 'react';
+import UserTable from '../userTable/userTable';
 import './preview.css'
 
 
 function Preview() {
     const [orderName, setOrderName] = useState([]);
     const [previewData, setpreviewData] = useState([]);
+
+    const [prwClick, setPrwClick] = useState(0);
 
 
     function initPreview(){
@@ -40,36 +43,41 @@ function Preview() {
         setOrderName(window.orderId)
         }, [])
 
-       
+        const handleClick = (event) =>{
+            let clk = 1;
+            setPrwClick(clk++);
+        }
+        console.log(prwClick);
 
+
+        if(prwClick < 1){
     return(
-         
-        <div>
-            
+      
+            <div className='preview-main'>
                 
-        <h1>Your order list:</h1>
+                    <form  className='form-preview' >
+                    <div className='headerPrw'>
+                    <h1>Your order information</h1>
+                    <p  onClick={event => handleClick(event)} className='prwBtn'>Back</p>
+                    </div>
+                
+                        <>
+                        <div  className='small-data'>
+                        <label className=''>Order name  <input className='prw-impt-sm'  readOnly={true} value={previewData.orderNumber} /></label>
+                        <label className=''>Data  <input className='prw-impt-sm'  readOnly={true} value={previewData.deliveryDate}  /></label>
+                        <label className=''>Order state  <input className='prw-impt-sm'  readOnly={true} value={previewData.state}   /></label>
+                        </div>
 
-        
-    
-    
-            
-    
-                <form  className='formClass' >
-                    <><label className='labelT'>Id  <input className='inputCl'  readOnly={true} value={previewData.id}  name="name" /></label>
-                    <label className='labelT'>Data  <input className='inputCl'  readOnly={true} value={previewData.deliveryDate}  /></label>
-                    <label className='labelT'>Order name  <input className='inputCl'  readOnly={true} value={previewData.orderNumber} /></label>
-                    <label className='labelT'>Order state  <input className='inputCl'  readOnly={true} value="In progress"  /></label>
-                    <div className='button-container'>
 
-
+                        <div className='big-data'>
+                        <p>Order requirements</p>
+                        <label className='lb-bg'> <input className='prw-impt-bg'  readOnly={true} value={previewData.requirements}   /></label>
                         </div></>
-                
-                </form>
-               
-        
-    
-
-    </div>
-    )
+                    
+                    </form>
+        </div>
+        )
+    }   
+    else return (<UserTable/>)
 }
 export default Preview;

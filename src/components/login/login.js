@@ -44,11 +44,7 @@ function Login() {
            // console.log(window.id);
             
     }
-
-
-   
-   
-
+      
     const handleInputChange = (e) => {
 
     const {id , value} = e.target;
@@ -58,11 +54,12 @@ function Login() {
     if(id === "password"){
         setPassword(value);
     }
-}
-    if(id == null)
-{
-    initLogin();
-}
+
+    }
+        if(id == null)
+    {
+        initLogin();
+    }
     
     const handleSubmit = () => {
         initLogin();

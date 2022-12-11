@@ -1,18 +1,69 @@
-.preview-conatiner{
-    width: 100%;
-    height: 100vh;
+.headerPrw{
+width: 80%;
+height: 10vh;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.prwBtn{
+    width: 10%;
+    font-size: 14px;
     background: wheat;
+    border: 2px solid rgba(135, 135, 135, 0.197);
+    border-radius: 10px;
+}
+
+.preview-main{
+width: 100%;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: wheat;
+
+}
+.form-preview{
+    width: 68%;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.preview-body{
-    width: 80%;
-    height: 80vh;
+    flex-direction: column;
+    border-radius: 20px;
     background: whitesmoke;
 }
-.order-preview-container{
+.small-data{
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+.prw-impt-sm{
+    background: wheat;
+    border: 2px solid rgba(135, 135, 135, 0.197);
+    border-radius: 4px;}
+.big-data{
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 65vh;
-    border-radius: 10px;
+    height: 35vh;
+    justify-content: center;
+    align-items: center;
+
+}
+.lb-bg{
+    width: 80%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.prw-impt-bg{
+    width: 100%;
+    height: 30vh;
+    background: wheat;
+    border: 2px solid rgba(135, 135, 135, 0.197);
+    border-radius: 4px;
 }

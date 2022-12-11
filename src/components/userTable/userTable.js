@@ -1,6 +1,7 @@
 import React, {useState,setState, useEffect} from 'react';
 import './userTable.css'
 import Preview from '../preview/preview';
+import Edit from '../edit/edit';
 
 let a = {};
 
@@ -32,27 +33,32 @@ getData()
 }, [])
 
 const [choiceClick, setchoiceClick] = useState(null);
+const [choiceClickEdit, setchoiceClickEdit] = useState(null);
+
 let previewClick = 1;
+let previewEdit = 1;
+
+
 const handleClick = (event, param) =>{
 window.orderId = param;
 setchoiceClick(previewClick++);
+}
+
+const handleClick2 = (event, param) =>{
+window.orderId = param;
+setchoiceClickEdit(previewEdit++);
 }
 //console.log(id.get(0));
 
 //console.log(id[0].valueOf('userId'));
 
-if(choiceClick < 1)
+if(choiceClick == null)
 {
-    return(
-            
+    return(           
             <div>
-            
                 
                 <h1>Your order list:</h1>
         
-                
-            
-            
                     {data.map((dat, index) => (
             
                         <form key={index} className='formClass' >
@@ -62,23 +68,32 @@ if(choiceClick < 1)
                             <label className='labelT'>Order state  <input className='inputCl'  readOnly={true} value="In progress"  /></label>
                             <div className='button-container'>
 
-
-                                    <h1 onClick={event => handleClick(event, dat.id)} className='buttonT'>Edit</h1>
+                                    <h1 onClick={event => handleClick2(event, dat.id)} className='buttonT'>Edit</h1>
                                     <h1 onClick={event => handleClick(event, dat.id)} className='buttonT'>Preview</h1>
-                                </div></>
-                        
+                                </div></>              
                         </form>
                         ))}
-                
-            
-
-            </div>
-        
-        
-
-        
+            </div> 
         )
+   }  
+   if(choiceClick == 1){
+    return (<Preview/>)
    }
-   else return (<Preview/>)
+   
+   if(choiceClickEdit == 1){
+    return (<Edit/>)
+   }
+ 
+
+
+
+
+
+
+  
+
+
+
+
 }
 export default UserTable;
