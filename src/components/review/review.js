@@ -43,7 +43,7 @@ function Review() {
                },
             body: JSON.stringify({
                 id: window.orderId,
-                requirements: editrequirements
+                systematizedRequirement: editrequirements
             })
         };
         fetch('http://localhost:8080/orders/css', requestOptions)
