@@ -58,6 +58,7 @@ function Edit() {
 
         const handleClick = (event) =>{
             initEditPost()
+            alert("You have edited your order requirements");
 
             
             let clk = 1;

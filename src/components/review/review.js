@@ -59,7 +59,7 @@ function Review() {
 
         const handleClick = (event) =>{
             initReviewPost();
-
+            alert("Order has been reviewed")
             
             let clk = 1;
             setedtClick(clk++);
