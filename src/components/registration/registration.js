@@ -1,7 +1,7 @@
 import React, {useState,setState} from 'react';
 import './style.css'
 import { useForm } from "react-hook-form";
-
+import toast, { Toaster } from 'react-hot-toast';
 function RegistrationForm() {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
@@ -36,7 +36,11 @@ function RegistrationForm() {
             fetch('http://localhost:8080/register', requestOptions)
                 .then(response => response.json())
                 //.then(data => this.setState({ postId: data.id }));
-    }
+                toast('Registration successful', {
+                    icon: '👏',
+                    position: "bottom-center"
+                  });
+}
     const [firstName, setFirstName] = useState(null);
     const [lastName, setLastName] = useState(null);
     const [phoneNumber, setPhoneNumber] = useState(null);
