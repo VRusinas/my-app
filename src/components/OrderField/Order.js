@@ -20,6 +20,9 @@ function Order() {
     }
 
     const handleSubmit = () => {
+        if(chosenTime===null || requirements===null) {
+alert("All field must be filled before submitting")
+        } else{
         alert("Your order has been submitted")
         console.log(window.id);
         const addOrder = {
@@ -40,6 +43,7 @@ function Order() {
         };
         fetch('http://localhost:8080/orders', requestOptions,)
             .then((response) => response.json())
+    }
 
     }
     let orderlist = 1;
