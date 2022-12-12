@@ -163,7 +163,7 @@ function Login() {
                 {errors.password && <label><b className='red'>Please enter the Password</b></label>}
             </div>
             <div className="footer1">
-                <button type='submit'>Login</button>
+                <button className='btn' type='submit'>Login</button>
 
             </div>
         </div>

@@ -73,6 +73,7 @@ animation-duration: 0.5s;
     border: 2px solid rgba(135, 135, 135, 0.197);
     border-radius: 10px;
     border-radius: 20px;
+    display: flex;
 }
 
 @keyframes slidein {
