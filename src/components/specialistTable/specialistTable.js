@@ -3,7 +3,7 @@ import Review from '../review/review';
 
 function SpecialistTable() {
    
-
+    
     const [id,setId] = useState([]);
     const [data, setData] = useState([]);
     const [orderName, setOrderName] = useState([]);
@@ -17,13 +17,10 @@ function SpecialistTable() {
                 setData(response);
        
     })
-   console.log(data[0]);
+   //console.log(data[0]);
 }
    
-useEffect(()=>{
- 
-getData()
-}, [])
+
 
 const [choiceClick, setchoiceClick] = useState(null);
 const [choiceClickEdit, setchoiceClickEdit] = useState(null);
@@ -32,19 +29,27 @@ let previewClick = 1;
 let previewEdit = 1;
 
 
-const handleClick = (event, param) =>{
-    window.orderId = param;
-    setchoiceClick(previewClick++);
-}
+
+
 const handleClickedit = (event, param) =>{
     window.orderId = param;
     setchoiceClickEdit(previewEdit++);
 }
 
-   if(choiceClickEdit == 1){
-    return (<Review/>)
-}
+useEffect(()=>{
+    setTimeout(() => {
+        getData()
+       
+       
+      },50);
    
+   }, [])
+
+
+
+if(choiceClickEdit == 1){
+    return (<Review/>)
+}  
 if(choiceClick == null)
 {
     return(           
