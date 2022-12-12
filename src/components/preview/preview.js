@@ -71,7 +71,8 @@ function Preview() {
 
                         <div className='big-data'>
                         <p>Order requirements</p>
-                        <label className='lb-bg'> <input className='prw-impt-bg'  readOnly={true} value={previewData.requirements}   /></label>
+                        <label className='lb-bg'> <textarea 
+                         rows="4" cols="80" className='prw-impt-bg'  readOnly={true} value={previewData.requirements}   /></label>
                         </div></>
                     
                     </form>

@@ -21,7 +21,7 @@ function Order() {
 
     const handleSubmit = () => {
         if(chosenTime===null || requirements===null) {
-alert("All field must be filled before submitting")
+alert("All field must be filled before")
         } else{
         alert("Your order has been submitted")
         console.log(window.id);
@@ -63,7 +63,8 @@ alert("All field must be filled before submitting")
 
                     <div className='orderRequirements'>
                         <div className='texBox'>
-                        <input 
+                        <textarea 
+                         rows="4" cols="80"
                         value={requirements} onChange = {(e) => handleInputChange(e)} id="requirements"
                         type="text" name="fname"/>
                         </div>
