@@ -113,19 +113,19 @@ function RegistrationForm() {
                     <input className="form__input" type="text" placeholder="First Name"
                     {...register("firstName", { required: true })}/>
                 </div>
-                {errors.firstName && <p>Please check the First Name</p>}
+                {errors.firstName && <label><b className='red'>Please check the First Name</b></label>}
                 <div className="lastname">
                     <label className="form__label" for="lastName">Last Name </label>
                     <input  type="text" className="form__input" placeholder="LastName"
                     {...register("lastName", { required: true })}/>
                 </div>
-                {errors.lastName && <p>Please check the Last Name</p>}
+                {errors.lastName && <label><b className='red'>Please check the Last Name</b></label>}
                 <div className="phoneNumber">
                     <label className="form__label" for="phoneNumber">Phone number </label>
                     <input  type="number" className="form__input" placeholder="phone number"
                     {...register("phoneNumber", { required: true, maxLength: 15 })}/>
                 </div>
-                {errors.phoneNumber && <p>Please check the phone number</p>}
+                {errors.phoneNumber && <label><b className='red'>Please check the phone number</b></label>}
                 <div className="email">
                     <label className="form__label" for="email">Email </label>
                     <input  type="email" className="form__input" placeholder="Email"
@@ -135,7 +135,7 @@ function RegistrationForm() {
                         pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                     })}/>
                 </div>
-                {errors.email && <p>Please check the Email</p>}
+                {errors.email && <label><b className='red'>Please check the Email</b></label>}
                 <div className="password">
                     <label className="form__label" for="password">Password </label>
                     <input className="form__input" type="password" placeholder="Password"
@@ -144,7 +144,7 @@ function RegistrationForm() {
                     pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/
                 })}                                    />
                 </div>
-                {errors.password && <p>Please check the Password</p>}
+                {errors.password && <label><b className='red'>Please check the Password </b></label>}
                 <div className="confirm-password">
                     <label className="form__label" for="confirmPassword">Confirm Password </label>
                     <input className="form__input" type="password" placeholder="Confirm Password"
@@ -153,7 +153,7 @@ function RegistrationForm() {
                         pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/
                     })}  />
                 </div>
-                {errors.passwordConfirm && <p>Please check the Password</p>}
+                {errors.passwordConfirm && <label><b className='red'>Please check the Password</b></label>}
             </div>
            
             </form>

@@ -154,13 +154,13 @@ function Login() {
                     <input type="email" id="email" className="form__input" placeholder="Email"
                     {...register("email", { required: true })}/>
                 </div>
-                {errors.email && <label><b>Please enter the Email</b></label>}
+                {errors.email && <label><b className='red'>Please enter the Email</b></label>}
                 <div className="password">
                     <label className="form__label1" for="password">Password </label>
                     <input className="form__input1" type="password" placeholder="Password"
                     {...register("password", { required: true })} />
                 </div>
-                {errors.password && <label><b>Please enter the Password</b></label>}
+                {errors.password && <label><b className='red'>Please enter the Password</b></label>}
             </div>
             <div className="footer1">
                 <button type='submit'>Login</button>
