@@ -9,12 +9,13 @@ import Edit from './components/edit/edit';
 import RegButton from './components/regButton/regButton';
 import SpecialistTable from './components/specialistTable/specialistTable';
 import Review from './components/review/review';
-
+import toast, { Toaster } from 'react-hot-toast';
 function App() {
   return (
     <div className="App">
        {/* <Header/> */}
        {/* <RegistrationForm/> */}
+        <Toaster/>
         <Login/>
         {/* <Order/> */}
         {/* <h1> {window.id}</h1> */}

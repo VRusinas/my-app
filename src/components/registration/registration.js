@@ -108,19 +108,19 @@ function RegistrationForm() {
                 <div className="username">
                     <label className="form__label" for="firstName">First Name </label>
                     <input className="form__input" type="text" placeholder="First Name"
-                    {...register("firstName", { required: true, maxLength: 10 })}/>
+                    {...register("firstName", { required: true })}/>
                 </div>
                 {errors.firstName && <p>Please check the First Name</p>}
                 <div className="lastname">
                     <label className="form__label" for="lastName">Last Name </label>
                     <input  type="text" className="form__input" placeholder="LastName"
-                    {...register("lastName", { required: true, maxLength: 10 })}/>
+                    {...register("lastName", { required: true })}/>
                 </div>
                 {errors.lastName && <p>Please check the Last Name</p>}
                 <div className="phoneNumber">
                     <label className="form__label" for="phoneNumber">Phone number </label>
                     <input  type="number" className="form__input" placeholder="phone number"
-                    {...register("phoneNumber", { required: true, maxLength: 10 })}/>
+                    {...register("phoneNumber", { required: true, maxLength: 15 })}/>
                 </div>
                 {errors.phoneNumber && <p>Please check the phone number</p>}
                 <div className="email">
