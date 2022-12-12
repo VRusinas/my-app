@@ -69,7 +69,7 @@ if(choiceClick == null)
                             <><label className='labelT'>Id  <input className='inputCl'  readOnly={true} value={dat.id} name="name" /></label>
                             <label className='labelT'>Data  <input className='inputCl'  readOnly={true} value={dat.deliveryDate}  /></label>
                             <label className='labelT'>Order name  <input className='inputCl'  readOnly={true} value={dat.orderNumber} /></label>
-                            <label className='labelT'>Order state  <input className='inputCl'  readOnly={true} value="In progress"  /></label>
+                            <label className='labelT'>Order state  <input className='inputCl'  readOnly={true} value={dat.state}  /></label>
                             <div className='button-container'>
 
                                     <h1 onClick={event => handleClickedit(event, dat.id)} className='buttonT'>Edit</h1>

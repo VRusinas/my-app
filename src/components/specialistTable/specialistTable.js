@@ -55,7 +55,7 @@ if(choiceClick == null)
     return(           
             <div>
                 
-                <h1>Your order list:</h1>
+                <h1>Not confirmed orders list:</h1>
         
                     {data.map((dat, index) => (
             
