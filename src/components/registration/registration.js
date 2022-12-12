@@ -103,6 +103,9 @@ function RegistrationForm() {
     return(
         <div className="form">
             <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="footer">
+                <button type='submit' className="btn">Register</button>
+            </div>
             <div className="form-body">
             
                 <div className="username">
@@ -152,9 +155,7 @@ function RegistrationForm() {
                 </div>
                 {errors.passwordConfirm && <p>Please check the Password</p>}
             </div>
-            <div className="footer">
-                <button type='submit' className="btn">Register</button>
-            </div>
+           
             </form>
         </div>
        

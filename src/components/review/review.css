@@ -4,9 +4,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    animation-name: slidein;
+    animation-duration: 0.5s;
 }
 .reviewBox{
     width: 80%;
     height: 90vh;
     background: wheat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+ 
 }
+.reviewbtncontainer{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.reviewT{
+    margin-left: 8px;
+    padding: 4px;
+    font-size: 18px;
+    background: rgba(70, 95, 236, 0.522);
+    color: rgba(0, 0, 0, 0.59);
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+}
+@keyframes slidein {
+    from {
+      opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
+}
+

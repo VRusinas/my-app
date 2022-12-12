@@ -55,7 +55,7 @@ function Order() {
     return(
             <div className='orderContainer'>
                 <div className='orderBox'>
-                    <h1>Reikalavimai: </h1>
+                    <h1>State you order requirement: </h1>
 
                     <div className='orderRequirements'>
                         <div className='texBox'>
@@ -67,7 +67,7 @@ function Order() {
                         <div className='date'>
                         <label
                         className='dateName'
-                         for="party">Enter a date and time for your party booking:</label>
+                         for="party">Enter the date you want your order to be completed:</label>
                         <input
                         className='datePicker'
                         //id="party"

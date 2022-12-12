@@ -96,6 +96,7 @@ if(choiceClick == null)
 
                         <div className='button-container2'>
                         <p onClick={event => handleClickOrder(event)} className='buttonT'>Add order</p>
+                        <a href="" className='buttonST'>Logout</a>
                             </div> 
                         </div> 
         )

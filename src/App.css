@@ -2,6 +2,9 @@ body{
   color: rgb(0, 0, 0);
   font-family: 'Roboto', sans-serif;
 }
+a{
+  text-decoration: none;
+}
 .App {
   text-align: center;
 }

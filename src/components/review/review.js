@@ -81,7 +81,7 @@ function Review() {
                     <form  className='reviewBox' >
                     <div className='reviewbtncontainer'>
                     <h1>Your order information</h1>
-                    <p  onClick={event => handleClick(event)} className='prwBtn'>Save</p>
+                    <p  onClick={event => handleClick(event)} className='reviewT'>Save</p>
                     </div>
                 
                         <>

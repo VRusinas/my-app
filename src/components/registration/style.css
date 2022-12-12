@@ -5,6 +5,8 @@
     height: 60vh;
     margin: 20px auto;
     padding: 20px;
+    animation-name: slidein;
+    animation-duration: 1s;
     /* height: 600px; */
 }
 
@@ -27,4 +29,14 @@
 
 .footer{
     text-align: center;
+}
+
+
+@keyframes slidein {
+    from {
+      opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
 }

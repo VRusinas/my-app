@@ -5,6 +5,15 @@ display: flex;
 justify-content: center;
 align-items: flex-end;
 }
+.formLogin{
+    background-color: rgba(70, 95, 236, 0.522);
+
+    border-radius: 5px;
+    width: 550px;
+    padding: 20px;
+    height: 25vh;
+    /* height: 600px; */
+}
 .form1{
     background-color: rgba(70, 95, 236, 0.522);
 
@@ -35,7 +44,7 @@ align-items: flex-end;
     text-align: center;
 }
 .btn{
-      width: 6vw;
+    width: 6vw;
     font-size: 14px;
     background: rgb(255, 255, 255);
     border: 2px solid rgba(135, 135, 135, 0.197);

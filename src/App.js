@@ -25,7 +25,7 @@ function App() {
         {/* <Edit/> */}
         {/* <RegButton/> */}
         {/* <SpecialistTable/> */}
-        <Review/>
+        {/* <Review/> */}
     </div>
   );
 }

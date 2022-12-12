@@ -146,7 +146,7 @@ function Login() {
         <>
         <div className='flexForm'>
         <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="form1">
+        <div className="formLogin">
             <div className="form-body1">
 
                 <div className="email">

@@ -1,5 +1,6 @@
 import React, {useState,setState, useEffect} from 'react';
 import Review from '../review/review';
+import './specialistTable.css'
 
 function SpecialistTable() {
    
@@ -53,7 +54,7 @@ if(choiceClickEdit == 1){
 if(choiceClick == null)
 {
     return(           
-            <div>
+            <div className='specMain'>
                 
                 <h1>Not confirmed orders list:</h1>
         
@@ -64,13 +65,19 @@ if(choiceClick == null)
                             <label className='labelT'>Data  <input className='inputCl'  readOnly={true} value={dat.deliveryDate}  /></label>
                             <label className='labelT'>Order name  <input className='inputCl'  readOnly={true} value={dat.orderNumber} /></label>
                             <label className='labelT'>Order state  <input className='inputCl'  readOnly={true} value="In progress"  /></label>
-                            <div className='button-container'>
+                            <div className='button-container3'>
 
                                     <h1 onClick={event => handleClickedit(event, dat.id)} className='buttonT'>Review</h1>
             
-                                </div></>              
+                                </div></>  
+                                     
                         </form>
                         ))}
+               
+               <div className='button-container2'>
+               <a href="" className='buttonST'>Logout</a>    
+                </div>
+                       
             </div> 
         )
    }  
