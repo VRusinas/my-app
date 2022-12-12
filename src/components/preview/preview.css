@@ -9,6 +9,7 @@ align-items: center;
     width: 10%;
     font-size: 14px;
     background: wheat;
+    color: white;
     border: 2px solid rgba(135, 135, 135, 0.197);
     border-radius: 10px;
 }
@@ -59,11 +60,21 @@ background: wheat;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    animation: slidein;
 }
 .prw-impt-bg{
     width: 100%;
     height: 30vh;
-    background: wheat;
+    background: rgba(70, 95, 236, 0.522);
     border: 2px solid rgba(135, 135, 135, 0.197);
     border-radius: 4px;
+}
+
+@keyframes slidein {
+    from {
+      opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
 }

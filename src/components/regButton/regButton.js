@@ -13,7 +13,7 @@ function RegButton() {
     return(
         <div className='btnConteiner'>
             <div className='btncc'>
-            <p onClick={event => handleClick(event)} className='regBtn'>Registration</p>
+            <p  onClick={event => handleClick(event)} className='regBtn'>Registration</p>
             </div>
     
         </div>

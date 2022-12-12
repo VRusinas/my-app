@@ -8,6 +8,7 @@ import Preview from './components/preview/preview';
 import Edit from './components/edit/edit';
 import RegButton from './components/regButton/regButton';
 import SpecialistTable from './components/specialistTable/specialistTable';
+import Review from './components/review/review';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
        {/* <Header/> */}
        {/* <RegistrationForm/> */}
         <Login/>
-        <Order/>
+        {/* <Order/> */}
         {/* <h1> {window.id}</h1> */}
         {/* <div>{window.id}</div> */}
         {/* <UserTable/> */}
@@ -23,6 +24,7 @@ function App() {
         {/* <Edit/> */}
         {/* <RegButton/> */}
         {/* <SpecialistTable/> */}
+        <Review/>
     </div>
   );
 }

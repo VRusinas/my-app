@@ -1,5 +1,6 @@
 import React, {useState,setState, useEffect} from 'react';
 import SpecialisTable from '../specialistTable/specialistTable';
+import './review.css'
 function Review() {
 
 
@@ -75,10 +76,10 @@ function Review() {
         if(editclk < 1){
         return(
       
-            <div className='preview-main'>
+            <div className='reviewContainer'>
                 
-                    <form  className='form-preview' >
-                    <div className='headerPrw'>
+                    <form  className='reviewBox' >
+                    <div className='reviewbtncontainer'>
                     <h1>Your order information</h1>
                     <p  onClick={event => handleClick(event)} className='prwBtn'>Save</p>
                     </div>

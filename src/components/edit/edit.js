@@ -80,7 +80,7 @@ function Edit() {
                     <form  className='form-preview' >
                     <div className='headerPrw'>
                     <h1>Your order information</h1>
-                    <p  onClick={event => handleClick(event)} className='prwBtn'>Save</p>
+                    <p  onClick={event => handleClick(event)} className='buttonT'>Save</p>
                     </div>
                 
                         <>

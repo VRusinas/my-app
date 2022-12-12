@@ -2,6 +2,7 @@ import React, {useState,setState, useEffect} from 'react';
 import './userTable.css'
 import Preview from '../preview/preview';
 import Edit from '../edit/edit';
+import Order from '../OrderField/Order';
 
 function UserTable() {
    
@@ -32,9 +33,11 @@ getData()
 
 const [choiceClick, setchoiceClick] = useState(null);
 const [choiceClickEdit, setchoiceClickEdit] = useState(null);
+const [orderPick, setOrderPick] = useState(null);
 
 let previewClick = 1;
 let previewEdit = 1;
+let previeworderPick = 1;
 
 
 const handleClick = (event, param) =>{
@@ -44,6 +47,10 @@ const handleClick = (event, param) =>{
 const handleClickedit = (event, param) =>{
     window.orderId = param;
     setchoiceClickEdit(previewEdit++);
+}
+const handleClickOrder = (event, param) =>{
+    window.orderId = param;
+    setOrderPick(previeworderPick++);
 }
 
 //console.log(id.get(0));
@@ -55,13 +62,21 @@ if(choiceClick == 1){
    if(choiceClickEdit == 1){
     return (<Edit/>)
 }
+if(orderPick == 1){
+    return (<Order/>)
+}
+   
    
 if(choiceClick == null)
 {
     return(           
             <div>
                 
+                <div>
                 <h1>Your order list:</h1>
+           
+                </div>
+       
         
                     {data.map((dat, index) => (
             
@@ -72,12 +87,17 @@ if(choiceClick == null)
                             <label className='labelT'>Order state  <input className='inputCl'  readOnly={true} value={dat.state}  /></label>
                             <div className='button-container'>
 
-                                    <h1 onClick={event => handleClickedit(event, dat.id)} className='buttonT'>Edit</h1>
-                                    <h1 onClick={event => handleClick(event, dat.id)} className='buttonT'>Preview</h1>
+                                    <p onClick={event => handleClickedit(event, dat.id)} className='buttonT'>Edit</p>
+                                    <p onClick={event => handleClick(event, dat.id)} className='buttonT'>Preview</p>
+                                    <p className='buttonT'>Cancel</p>
                                 </div></>              
                         </form>
                         ))}
-            </div> 
+
+                        <div className='button-container2'>
+                        <p onClick={event => handleClickOrder(event)} className='buttonT'>Add order</p>
+                            </div> 
+                        </div> 
         )
    }  
 

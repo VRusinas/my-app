@@ -1,12 +1,13 @@
 .flexForm{
 width: 100%;
-height: 25vh;
+height: 50vh;
 display: flex;
 justify-content: center;
-align-items: center;
+align-items: flex-end;
 }
 .form1{
-    background-color: wheat;
+    background-color: rgba(70, 95, 236, 0.522);
+
     border-radius: 5px;
     width: 550px;
     padding: 20px;
@@ -26,6 +27,7 @@ align-items: center;
 }
 
 .form_input1{
+
     width: 60%;
 }
 

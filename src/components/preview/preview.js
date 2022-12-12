@@ -58,7 +58,7 @@ function Preview() {
                     <form  className='form-preview' >
                     <div className='headerPrw'>
                     <h1>Your order information</h1>
-                    <p  onClick={event => handleClick(event)} className='prwBtn'>Back</p>
+                    <p  onClick={event => handleClick(event)} className='buttonT'>Back</p>
                     </div>
                 
                         <>

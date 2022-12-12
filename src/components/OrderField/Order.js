@@ -1,5 +1,6 @@
 import React, {useState,setState}  from 'react';
 import Header from '../header/header';
+import UserTable from '../userTable/userTable';
 import './style.css'
 function Order() {
 
@@ -19,6 +20,7 @@ function Order() {
     }
 
     const handleSubmit = () => {
+        alert("Your order has been submitted")
         console.log(window.id);
         const addOrder = {
             requirements: requirements
@@ -38,6 +40,16 @@ function Order() {
         };
         fetch('http://localhost:8080/orders', requestOptions,)
             .then((response) => response.json())
+
+    }
+    let orderlist = 1;
+    const handleClickOrderList = (event, param) =>{
+        window.orderId = param;
+        setorderList(orderlist++);
+    }
+    const [orderList, setorderList] = useState(null);
+    if(orderList == 1){
+        return (<UserTable/>)
     }
 
     return(
@@ -65,8 +77,11 @@ function Order() {
                         </div>
 
                     </div>
-                    <button onClick={()=>handleSubmit()} type="submit" className='submitBtn'>Užsakyti</button>
-                    <h1>{window.id}</h1>
+                    <div className='button-container2'>
+
+                    <button onClick={()=>handleSubmit()} type="submit" className='buttonT'>Submit</button>
+                    <button onClick={event => handleClickOrderList(event)} type="submit" className='buttonT'>Order list</button>
+                    </div>
                 </div>
             </div>
     )
