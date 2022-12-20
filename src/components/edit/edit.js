@@ -80,13 +80,13 @@ function Edit() {
                 
                     <form  className='form-preview' >
                     <div className='headerPrw'>
-                    <h1>Your order information</h1>
+                    <h1>Your order information:</h1>
                     <p  onClick={event => handleClick(event)} className='buttonT'>Save</p>
                     </div>
                 
                         <>
                         <div className='big-data'>
-                        <p>Order requirements</p>
+                        <p>Order requirements:</p>
                         <label className='lb-bg'> <textarea 
                          rows="4" cols="80" type="text" className='prw-impt-bg' defaultValue={editData.requirements} onChange = {(e) => handleInputChange(e)}   /></label>
                         </div></>
