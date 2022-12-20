@@ -7,7 +7,7 @@ function ProjectLeadTable() {
     const [orderState, setOrderState] = useState([]);
 
     const getData =()=>{
-        fetch('http://localhost:8080/orders/css' )
+        fetch('http://localhost:8080/orders/project' )
             .then((response) => {return response.json();})
             .then((response) => {
                 

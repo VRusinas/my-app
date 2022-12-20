@@ -17,7 +17,7 @@ function App() {
        {/* <Header/> */}
        {/* <RegistrationForm/> */}
         <Toaster/>
-        {/* <Login/> */}
+        <Login/>
         {/* <Order/> */}
         {/* <h1> {window.id}</h1> */}
         {/* <div>{window.id}</div> */}
@@ -27,7 +27,7 @@ function App() {
         {/* <RegButton/> */}
         {/* <SpecialistTable/> */}
         {/* <Review/> */}
-        <ProjectLeadTable/>
+        {/* <ProjectLeadTable/> */}
 
     </div>
   );
