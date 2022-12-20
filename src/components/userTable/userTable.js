@@ -10,6 +10,7 @@ function UserTable() {
 
     const [id,setId] = useState([]);
     const [data, setData] = useState([]);
+    const [count, setCount] = useState(0);
     const [orderName, setOrderName] = useState([]);
     const [orderState, setOrderState] = useState([]);
     const [tableRefresh, setTableRefresher] = useState([]);
@@ -24,7 +25,19 @@ function UserTable() {
 }
 
 function OrderDelete(){
-    fetch('http://localhost:8080/orders/id?orderDeleteId=' + window.orderId, { method: 'DELETE' })      
+    fetch('http://localhost:8080/orders/id?orderDeleteId=' + window.orderId, { method: 'DELETE' })
+    .then((response) => {return response.json();})
+            .then((response) => {
+                if(count === 0) {
+                if(response===1) {
+                    toast.success("Order was cancelled")
+                }
+                else if (response === 0) {
+               toast.error("Order can't be deleted, since it is already in creation")
+                }
+                setCount(10);
+            }
+    })    
 }
 function UserDelete(){
     fetch('http://localhost:8080/users?deleteId=' +  window.id, { method: 'DELETE' }) 
@@ -93,9 +106,7 @@ if(deletePick == 1)
     window.refreshUserTable++;
     console.log(window.alertmessage)
     console.log(window.refreshUserTable + "refresh table")
-    toast.success('Order was cancelled', {
-        position: "bottom-center"
-      })
+
    }
     OrderDelete();    
 }
