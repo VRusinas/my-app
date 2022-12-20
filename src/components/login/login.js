@@ -7,6 +7,7 @@ import './style.css'
 import SpecialistTable from '../specialistTable/specialistTable';
 import toast, { Toaster } from 'react-hot-toast';
 import { useForm } from "react-hook-form";
+import ProjectLeadTable from '../projectLead/projectLeadTable';
 function Login() {
     
     const [email, setEmail] = useState(null);
@@ -177,6 +178,9 @@ function Login() {
     else{
         if(userType == "CLIENT"){
             return (<UserTable/>)
+        }
+        if(userType == "PROJECT_Manager"){
+            return (<ProjectLeadTable/>)
         }
         if(userType == "CUSTOMER_SERVICE_SPECIALIST"){
             return (<SpecialistTable/>)

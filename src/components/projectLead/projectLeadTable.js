@@ -1,5 +1,6 @@
 import React, {useState,setState, useEffect} from 'react';
 import './project.css'
+import FormTask from '../FormTask/FormTask';
 function ProjectLeadTable() {
     const [id,setId] = useState([]);
     const [data, setData] = useState([]);
@@ -41,9 +42,8 @@ useEffect(()=>{
       },100);
    
    }, [])
-
 if(choiceClickEdit == 1){
-    return ("kqwdio")
+    return (<FormTask/>)
 }  
 if(choiceClick == null)
 {

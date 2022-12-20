@@ -10,6 +10,7 @@ import RegButton from './components/regButton/regButton';
 import SpecialistTable from './components/specialistTable/specialistTable';
 import Review from './components/review/review';
 import ProjectLeadTable from './components/projectLead/projectLeadTable';
+import FormTask from './components/FormTask/FormTask';
 import toast, { Toaster } from 'react-hot-toast';
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         {/* <SpecialistTable/> */}
         {/* <Review/> */}
         {/* <ProjectLeadTable/> */}
+        {/* <FormTask/> */}
 
     </div>
   );
