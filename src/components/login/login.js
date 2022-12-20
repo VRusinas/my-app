@@ -17,7 +17,8 @@ function Login() {
     const [userType, setuserType] = useState(null);
     const [a, setA] = useState(0);
     let b=1;
-   
+   window.alertmessage =1;
+   window.refreshUserTable = 1;
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
 

@@ -70,3 +70,7 @@
         opacity: 100;
     }
 }
+.title{
+    justify-content: space-between;
+    display:flex;
+}

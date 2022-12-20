@@ -26,7 +26,7 @@ function Preview() {
             .then((response) => {
                 
                 setpreviewData(response);
-                console.log(orderName);
+               
                 // for(let i; i < response.length; i++){
 
                 // }
