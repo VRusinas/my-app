@@ -128,7 +128,9 @@ if(choiceClick == null)
             
             <div className='title'>
             <h1>Your order list:</h1>
-            <p  onClick={event => handleUserDelete(event)} className='buttonT'>Delete user</p>
+            <div className='button-container2'>
+            <p  onClick={event => handleUserDelete(event)} className='buttonT'>Delete profile</p>
+            </div> 
             </div>
    
     

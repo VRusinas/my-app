@@ -86,11 +86,12 @@ function Review() {
                 
                         <>
                         <div className='big-data'>
-                        <p>Clients order requirements</p>
+                        <p>Clients order requirements:</p>
                         <label className='lb-bg'> <textarea 
                          rows="4" cols="80" type="text" className='prw-impt-bg' readOnly={true} value={editData.requirements}  /></label>
                         </div>
                         <div className='big-data'>
+                        <br/><p>Systemize order data:</p>
                         <label className='lb-bg'> <textarea 
                          rows="4" cols="80" type="text" className='prw-impt-bg' defaultValue={editData.requirements} onChange = {(e) => handleInputChange(e)}   /></label>
                         </div></>
