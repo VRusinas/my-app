@@ -45,7 +45,7 @@ function FormTask() {
                 systematizedRequirement: editrequirements
             })
         };
-        fetch('http://localhost:8080/orders/projects', requestOptions)
+        fetch('http://localhost:8080/orders/project', requestOptions)
             
     }
 
