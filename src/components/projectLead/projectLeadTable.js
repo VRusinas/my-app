@@ -70,7 +70,8 @@ if(choiceClick == null)
                         ))}
                
                <div className='button-container2'>
-               <a href="" className='buttonST'>Logout</a>    
+               <a href="" className='buttonST'>Logout</a>
+               <a href="http://localhost:8080/orders/export-to-excel" class="buttonST">Generate orders report</a>    
                 </div>
                        
             </div> 
